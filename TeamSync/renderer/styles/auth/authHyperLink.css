@@ -1,0 +1,34 @@
+
+.box {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+
+.text {
+    font-size: 1em;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 30px;
+    color: #c3c3c3;
+}
+
+.hyperLink {
+    color: #00dfc4;
+    font-size: 1em;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+
+.hyperLink:hover {
+    color: #016253;
+    cursor: pointer;
+}
+
+.hyperLink:active {
+    color: rgba(59, 255, 160, 0.25);
+    cursor: pointer;
+}
+

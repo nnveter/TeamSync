@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="68cdb2a6-766b-4f88-a3ef-7aa4a6141b8c" name="Changes" comment="create project">
+      <change afterPath="$PROJECT_DIR$/VoMic/renderer/other/getjwt.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoMic/renderer/pages/_app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoMic/renderer/pages/auth/login.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoMic/renderer/pages/auth/registration.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VoMic/renderer/pages/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/VoMic.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TeamSync.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoMic/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/VoMic/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoMic/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/VoMic/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoMic/renderer/pages/_app.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoMic/renderer/pages/home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/VoMic/renderer/pages/home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoMic/renderer/pages/login.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoMic/renderer/pages/registration.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoMic/renderer/strings/constants.js" beforeDir="false" afterPath="$PROJECT_DIR$/VoMic/renderer/strings/constants.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VoMic/renderer/styles/auth.css" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="76915c3e-a018-41d9-ab22-d4dc90533d9a" />
+        <option name="url" value="https://github.com/nnveter/VoMic.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2MuOlgmd4Wsya8kUvIIzUnHk1CH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Ilya/WebstormProjects/VoMic/VoMic/renderer/pages",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.2.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ilya\WebstormProjects\VoMic\VoMic\renderer\pages" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ilya\WebstormProjects\VoMic\VoMic\renderer\pages\auth" />
+      <recent name="C:\Users\Ilya\WebstormProjects\VoMic\VoMic\renderer\pages" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/VoMic/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="68cdb2a6-766b-4f88-a3ef-7aa4a6141b8c" name="Changes" comment="" />
+      <created>1678614153571</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678614153571</updated>
+      <workItem from="1678614154663" duration="7514000" />
+      <workItem from="1679504420163" duration="19000" />
+      <workItem from="1679504461949" duration="25000" />
+      <workItem from="1679504495024" duration="337000" />
+      <workItem from="1679504844044" duration="149000" />
+      <workItem from="1679505003443" duration="205000" />
+      <workItem from="1680436120707" duration="8669000" />
+      <workItem from="1680454289737" duration="3251000" />
+    </task>
+    <task id="LOCAL-00001" summary="create project">
+      <created>1678617924416</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678617924416</updated>
+    </task>
+    <task id="LOCAL-00002" summary="create project">
+      <created>1678619601854</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678619601854</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="create project" />
+    <option name="LAST_COMMIT_MESSAGE" value="create project" />
+  </component>
+</project>
