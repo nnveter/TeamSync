@@ -14,13 +14,13 @@ function Home() {
         })
             .then(r => {
                 let jwt = getJwt()
-                let res = axios({
+                axios({
                     method: 'post',
                     url: URL + 'auth/refresh',
                     data: {refreshToken: jwt.refresh},
                 })
                     .then(resp => {
-                        let res = axios({
+                        axios({
                             method: 'post',
                             url: URL + 'auth/access',
                             data: {refreshToken: resp.data.refreshToken},
@@ -28,7 +28,7 @@ function Home() {
                             setJwt(response.data.accessTocken, resp.data.refreshToken)
                         }).catch(e => {
                             router.push("auth//login");
-                        })
+                        });
                         router.push("/main");
                     })
                     .catch(e => {

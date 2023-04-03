@@ -23,7 +23,7 @@ const Login = () => {
                 setJwt(r.data.accessToken, r.data.refreshToken)
                 router.push("/main")
             })
-            .catch(e => {
+            .catch(() => {
                 setState(true)
             })
     }
