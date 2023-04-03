@@ -1,0 +1,27 @@
+.serverFrame{
+    display: flex;
+    background: white;
+    border-radius: 50%;
+    width: 80%;
+    height: 3.2vmax;
+    margin: 3px auto 0;
+}
+
+.serverFrame:hover{
+    border-radius: 30%;
+    transition-duration: 0.8s;
+}
+
+.serverFrame:hover::before {
+    content: attr(title);
+    display: flex;
+    top: -5px;
+    left: 0;
+    margin-left: 150%;
+    z-index: 3;
+    background-color: rgb(17, 18, 20);
+    color: #fff;
+    padding: 10px;
+    border-radius: 7px;
+    white-space: nowrap;
+}

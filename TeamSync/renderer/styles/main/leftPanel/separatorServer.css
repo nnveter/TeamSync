@@ -1,0 +1,10 @@
+.separatorServerFrame{
+    display: flex;
+    margin-top: 3px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    height: 1px;
+    background: #181e28;
+    border-radius: 15%;
+}

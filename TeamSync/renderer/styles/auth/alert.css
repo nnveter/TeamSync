@@ -2,7 +2,7 @@
     animation: alerts ease-out 1.5s;
     width: 100%;
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,17 +10,19 @@
 }
 
 .alert{
+    z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     min-width: 250px;
     padding: 15px 30px;
-    background: linear-gradient(45deg, rgb(24, 30, 40) 0%,
+    background: linear-gradient(45deg, rgb(40, 24, 24) 0%,
     rgb(40, 30, 40) 46%,
     #181e28 100%);
     color: white;
     border-radius: 5px;
+    box-shadow: red 0 4px;
 }
 
 @keyframes alerts {

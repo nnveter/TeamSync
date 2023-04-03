@@ -32,7 +32,7 @@ const Registration = () => {
 
     return (
         <>
-            {state && <Alert message="неверный логин или пароль" sost={state} func={setState}></Alert>}
+            {state && <Alert message="Данные введены неверно" sost={state} func={setState}></Alert>}
             <div className="bgReg">
                 <Head>
                     <title>{AppName}</title>

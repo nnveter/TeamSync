@@ -29,7 +29,7 @@ const Login = () => {
     }
     return (
         <>
-        {state && <Alert message="неверный логин или пароль" sost={state} func={setState}></Alert>}
+        {state && <Alert message="Неверный логин или пароль" sost={state} func={setState}></Alert>}
             <div className="bgLog">
                 <Head>
                     <title>{AppName}</title>
