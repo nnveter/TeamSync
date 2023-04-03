@@ -1,0 +1,29 @@
+.mainDiv{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.rootLeftPanel{
+    height: 100%;
+    width: 4.7%;
+    background: #00dfc4;
+}
+
+.rootLeftDopPanel{
+    height: 100%;
+    width: 15.5%;
+    background: red;
+}
+
+.rootCentralPanel{
+    height: 100%;
+    width: 56.45%;
+    background: rgba(92, 255, 86, 0.25);
+}
+
+.rootRightPanel{
+    height: 100%;
+    width: auto;
+    background: rgb(0, 0, 0);
+}

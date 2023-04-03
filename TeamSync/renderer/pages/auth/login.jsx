@@ -5,11 +5,13 @@ import {AppName, URL} from "../../strings/constants";
 import {setJwt} from "../../other/getjwt";
 import Head from "next/head";
 import {router} from "next/client";
+import Alert from "../../components/Alert";
 const Login = () => {
 
     let [email, setEmail] = useState('');
     let [password, setPassword] = useState('');
 
+    let [state, setState] = useState(false)
     const OnClick = () => {
         axios({
             url: URL + "auth/login",
@@ -20,41 +22,46 @@ const Login = () => {
                 setJwt(r.data.accessToken, r.data.refreshToken)
                 router.push("/main")
             })
-            .catch(e => {console.log(e.data)}) // TODO: сообщение об ошибке
+            .catch(e => {
+                setState(true)
+            })
     }
     return (
-        <div className="bgLog">
-            <Head>
-                <title>{AppName}</title>
-            </Head>
-            <div className="container">
-                <span className="title">Login</span>
-                <div className="inputBox">
-                    <input type="text" required="required" value={email} onChange={e => setEmail(e.target.value)}/>
-                    <span>Email</span>
+        <>
+        {state && <Alert message="неверный логин или пароль" sost={state} func={setState}></Alert>}
+            <div className="bgLog">
+                <Head>
+                    <title>{AppName}</title>
+                </Head>
+                <div className="container">
+                    <span className="title">Login</span>
+                    <div className="inputBox">
+                        <input type="text" required="required" value={email} onChange={e => setEmail(e.target.value)}/>
+                        <span>Email</span>
+                    </div>
+                    <div className="inputBox">
+                        <input type="password" required="required" value={password} onChange={e => setPassword(e.target.value)}/>
+                        <span>Password</span>
+                    </div>
+                    <div>
+                        <button className="button" onClick={OnClick}>Next</button>
+                    </div>
+                    <div className="box">
+                        <span className="text">Don't you have an account yet?</span>
+                        <Link href="registration">
+                            <a className="hyperLink">sing up</a >
+                        </Link>
+                    </div>
                 </div>
-                <div className="inputBox">
-                    <input type="password" required="required" value={password} onChange={e => setPassword(e.target.value)}/>
-                    <span>Password</span>
-                </div>
-                <div>
-                    <button className="button" onClick={OnClick}>Next</button>
-                </div>
-                <div className="box">
-                    <span className="text">Don't you have an account yet?</span>
-                    <Link href="registration">
-                        <a className="hyperLink">sing up</a >
-                    </Link>
-                </div>
+                <ul className="glass">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
-            <ul className="glass">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
+            </>
     );
 };
 

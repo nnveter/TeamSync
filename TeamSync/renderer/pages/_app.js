@@ -7,6 +7,8 @@ import "../styles/auth/authInput.css"
 import "../styles/auth/authButton.css"
 import "../styles/auth/authTitle.css"
 import "../styles/auth/authHyperLink.css"
+import "../styles/main/leftPanel.css"
+import "../styles/auth/alert.css"
 
 
 export default function App({ Component, pageProps }) {
