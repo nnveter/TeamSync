@@ -6,6 +6,7 @@ import {setJwt} from "../../other/getjwt";
 import {router} from "next/client";
 import Head from "next/head";
 import Alert from "../../components/Alert";
+
 const Registration = () => {
 
     let [email, setEmail] = useState('');

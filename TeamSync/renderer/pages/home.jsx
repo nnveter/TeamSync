@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import Head from 'next/head';
 import {AppName, URL} from "../strings/constants";
 import axios from "axios";
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router'
 import {getJwt, setJwt} from "../other/getjwt";
 
 function Home() {

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import Link from 'next/link';
 import axios from "axios";
 import {AppName, URL} from "../../strings/constants";
@@ -6,6 +6,7 @@ import {setJwt} from "../../other/getjwt";
 import Head from "next/head";
 import {router} from "next/client";
 import Alert from "../../components/Alert";
+
 const Login = () => {
 
     let [email, setEmail] = useState('');
