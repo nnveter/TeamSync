@@ -2,7 +2,6 @@ import React from 'react';
 import {AppName} from "../strings/constants";
 import Head from "next/head";
 import ServerList from "../components/LeftPanel/ServerList";
-import SeparatorServer from "../components/LeftPanel/SeparatorServer";
 
 const Main = () => {
     return (

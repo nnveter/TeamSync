@@ -1,27 +1,35 @@
 .serverFrame{
     display: flex;
-    background: white;
+    background: rgb(49, 51, 56);
     border-radius: 50%;
-    width: 80%;
-    height: 3.2vmax;
+    width: 48px;
+    height: 48px;
     margin: 3px auto 0;
+    transition: .5s;
 }
 
 .serverFrame:hover{
     border-radius: 30%;
-    transition-duration: 0.8s;
 }
 
 .serverFrame:hover::before {
     content: attr(title);
     display: flex;
-    top: -5px;
-    left: 0;
     margin-left: 150%;
     z-index: 3;
     background-color: rgb(17, 18, 20);
     color: #fff;
-    padding: 10px;
+    padding: 10px 10px 10px 10px;
     border-radius: 7px;
     white-space: nowrap;
+}
+
+.serverFrame text{
+    display: flex;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: auto 6px auto 6px;
 }

@@ -6,24 +6,24 @@
 
 .rootLeftPanel{
     height: 100%;
-    width: 4.7%;
-    background: #00dfc4;
+    width: 72px;
+    background: rgb(30, 31, 34);
 }
 
 .rootLeftDopPanel{
     height: 100%;
-    width: 15.5%;
+    width: 220px;
     background: red;
 }
 
 .rootCentralPanel{
     height: 100%;
-    width: 56.45%;
+    width: 816px;
     background: rgba(92, 255, 86, 0.25);
 }
 
 .rootRightPanel{
     height: 100%;
-    width: auto;
+    width: 333px;
     background: rgb(0, 0, 0);
 }

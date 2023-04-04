@@ -13,7 +13,7 @@ const ServerList = () => {
 
     return (
         <div className="serverList">
-            <Server info={{ name: "ls", notification: 0, srcImage: ""}}></Server>
+            <Server info={{ name: "Личные сообщения", notification: 0, srcImage: ""}}></Server>
             <SeparatorServer/>
             { listServer.map((e) => <Server info={e} key={e.id}></Server>) }
         </div>
