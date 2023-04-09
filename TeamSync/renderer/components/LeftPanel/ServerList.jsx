@@ -1,8 +1,10 @@
 import React, {useState} from 'react';
 import Server from "./Server";
 import SeparatorServer from "./SeparatorServer";
+import AddServer from "./AddServer";
+import LsServer from "./LsServer";
 
-const ServerList = () => {
+const ServerList = (props) => {
 
     const [listServer, setListServer] = useState(
         [{id: 1, name: "name1", notification: 0, srcImage: "https://cdn.discordapp.com/icons/1026573870121091082/d2bc418df794b0a10fef64999e373055.webp?size=128"},
@@ -13,9 +15,10 @@ const ServerList = () => {
 
     return (
         <div className="serverList">
-            <Server info={{ name: "Личные сообщения", notification: 0, srcImage: ""}}></Server>
+            <LsServer/>
             <SeparatorServer/>
             { listServer.map((e) => <Server info={e} key={e.id}></Server>) }
+            <AddServer onClick={props.addServerClick}/>
         </div>
     );
 };
