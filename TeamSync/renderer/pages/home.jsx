@@ -25,7 +25,7 @@ function Home() {
                             url: URL + 'auth/access',
                             data: {refreshToken: resp.data.refreshToken},
                         }).then(response => {
-                            setJwt(response.data.accessTocken, resp.data.refreshToken)
+                            setJwt(response.data.accessToken, resp.data.refreshToken)
                         }).catch(e => {
                             router.push("auth//login");
                         });

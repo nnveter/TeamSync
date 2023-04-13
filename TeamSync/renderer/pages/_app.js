@@ -13,6 +13,9 @@ import "../styles/main/leftPanel/serverList.css"
 import "../styles/main/leftPanel/server.css"
 import "../styles/main/leftPanel/separatorServer.css"
 import "../styles/main/leftPanel/dialog/addServerDialog.css"
+import "../styles/main/leftDopPanel/serverTitle.css"
+import "../styles/main/leftDopPanel/channelList.css"
+import "../styles/main/leftDopPanel/channel.css"
 
 
 export default function App({ Component, pageProps }) {

@@ -7,23 +7,31 @@
 .rootLeftPanel{
     height: 100%;
     width: 72px;
+    min-width: 72px;
+    max-width: 72px;
     background: rgb(30, 31, 34);
 }
 
 .rootLeftDopPanel{
     height: 100%;
     width: 220px;
-    background: red;
+    min-width: 220px;
+    max-width: 220px;
+    background: rgb(43,45,49);
 }
 
 .rootCentralPanel{
     height: 100%;
     width: 816px;
+    min-width: 816px;
+    max-width: 816px;
     background: rgba(92, 255, 86, 0.25);
 }
 
 .rootRightPanel{
     height: 100%;
     width: 333px;
+    min-width: 333px;
+    max-width: 333px;
     background: rgb(0, 0, 0);
 }

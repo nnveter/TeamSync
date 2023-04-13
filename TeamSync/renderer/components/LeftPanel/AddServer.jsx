@@ -3,7 +3,7 @@ import React from 'react';
 const AddServer = (props) => {
 
     return (
-        <div className="addServerFrame" title="1" onClick={props.onClick}/>
+        <div className="addServerFrame" title="Создать сервер" onClick={props.onClick}/>
     );
 };
 

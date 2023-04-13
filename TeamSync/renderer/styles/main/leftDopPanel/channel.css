@@ -1,0 +1,28 @@
+
+.channelContainer{
+    background: none;
+    display: flex;
+    align-content: center;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 2px;
+    padding: 3px;
+    border-radius: 4px;
+    transition: .1s;
+}
+
+.channelContainer:hover{
+    background: rgb(54, 55, 61);
+}
+
+.channelContainer.active{
+    background: rgb(64,66,73);
+}
+
+.channelContainer text{
+    margin-bottom: 3px;
+    color: rgb(138,145,156);
+}
+.channelContainer.active text{
+    color: rgb(241,243,244);
+}
