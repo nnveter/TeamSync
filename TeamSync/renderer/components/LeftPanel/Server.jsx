@@ -2,6 +2,7 @@ import React from 'react';
 import axios from "axios";
 import {URL} from "../../strings/constants";
 import {getJwt} from "../../other/getjwt";
+import Tooltip from "../Other/Tooltip";
 
 const Server = (props) => {
 
@@ -9,7 +10,7 @@ const Server = (props) => {
         axios({
             url: URL + "channels",
             method: "post",
-            data: {spaceId: props.info.id, title:"первый канал 5"},
+            data: {spaceId: props.info.id, title:"8888888888888888"},
             headers: {'Authorization': "Bearer " + getJwt().access}
         })
             .then(r => {
@@ -21,9 +22,11 @@ const Server = (props) => {
     } // TODO: переместить
 
     return (
-        <div className="serverFrame" onClick={props.onClick} onDoubleClick={test}
-             title={props.info.title}
-             style={{ backgroundImage: `url(${props.info.srcImage})`, backgroundSize: 'cover' }}/>
+        <Tooltip content={props.info.title} position={"right"}>
+            <div className="serverFrame" onClick={props.onClick} onDoubleClick={test}
+                 title={props.info.title}
+                 style={{ backgroundImage: `url(${props.info.srcImage})`, backgroundSize: 'cover' }}/>
+        </Tooltip>
     );
 };
 

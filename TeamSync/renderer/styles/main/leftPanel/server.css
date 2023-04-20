@@ -8,6 +8,7 @@
     height: 48px;
     margin: 8px auto 0;
     transition: .3s;
+    user-select: none;
 }
 
 .lsServerFrame:hover{
@@ -18,10 +19,6 @@
     transform: translateY(3px);
 }
 
-.lsImage{
-
-
-}
 
 .serverFrame{
     display: flex;
@@ -41,17 +38,6 @@
     transform: translateY(3px);
 }
 
-.serverFrame:hover::before {
-    content: attr(title);
-    display: flex;
-    margin-left: 150%;
-    z-index: 3;
-    background-color: rgb(17, 18, 20);
-    color: #fff;
-    padding: 10px 10px 10px 10px;
-    border-radius: 7px;
-    white-space: nowrap;
-}
 
 .serverFrame text{
     display: flex;
@@ -101,14 +87,24 @@
     transition: .3s;
 }
 
-.addServerFrame:hover::after {
-    content: attr(title);
+.serverFrame.activeCode{
     display: flex;
-    margin-left: 80%;
-    z-index: 3;
-    background-color: rgb(17, 18, 20);
-    color: #fff;
-    padding: 10px 10px 10px 10px;
-    border-radius: 7px;
-    white-space: nowrap;
+    fill: rgb(35, 165, 89);
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.serverFrame.activeCode:hover{
+    fill: white;
+    background: rgb(35, 165, 89);
+}
+
+.activeCodeSvg{
+    margin-left: -3.4px;
+}
+
+.activeCodeSvg:hover{
+
 }

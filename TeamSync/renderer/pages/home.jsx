@@ -27,7 +27,7 @@ function Home() {
                         }).then(response => {
                             setJwt(response.data.accessToken, resp.data.refreshToken)
                         }).catch(e => {
-                            router.push("auth//login");
+                            router.push("auth/login");
                         });
                         router.push("/main");
                     })

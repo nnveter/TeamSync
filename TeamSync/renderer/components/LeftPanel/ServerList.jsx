@@ -5,19 +5,28 @@ import AddServer from "./AddServer";
 import LsServer from "./LsServer";
 import axios from "axios";
 import {URL} from "../../strings/constants";
-import {getJwt, setJwt} from "../../other/getjwt";
+import {getJwt} from "../../other/getjwt";
 import AddServerDialog from "./Dialog/AddServerDialog";
+import Dialog from "./Dialog/Dialog";
+import ActivateCodeDialog from "./Dialog/ActivateCodeDialog";
+import ActiveCode from "./ActiveCode";
 
 const ServerList = (props) => {
 
-    function getServer(){
+    const [dialogState, setDialogState] = useState(false)
+    const [dialogState2, setDialogState2] = useState(false)
+
+    function getServer(id){
         axios({
             url: URL + "spaces/my",
             method: "get",
             headers: {'Authorization': "Bearer " + getJwt().access}
         })
             .then(r => {
-                setListServer(r.data)
+                props.setListServer(r.data)
+                setDialogState(false)
+                setDialogState2(false)
+                props.setOpenServer([id])
             })
             .catch(() => {
                 console.log("Не удаёться получить сервера пользователя")
@@ -26,21 +35,23 @@ const ServerList = (props) => {
 
     useEffect(getServer, [])
 
-
-    const [listServer, setListServer] = useState([])
-
-    const [addServerState, setAddServerState] = useState(false)
-
     return (
         <div>
             <div className="serverList">
                 <LsServer/>
                 <SeparatorServer/>
-                { listServer.map((e) =>
+                { props.listServer.map((e) =>
                     <Server info={e} key={e.id} onClick={() => props.setOpenServer([e.id])} />) }
-                <AddServer onClick={() => setAddServerState(true)}/>
+                <AddServer content="Добавить сервер" onClick={() => setDialogState2(true)}/>
+                <ActiveCode content="Присоедениться к серверу" onClick={() => setDialogState(true)}/>
             </div>
-            <AddServerDialog active={addServerState} setActive={setAddServerState} successful={getServer}/>
+            <Dialog active={dialogState} setActive={setDialogState}>
+                {/*<AddServerDialog backClick={() => setDialogState(false)} successful={getServer}/>*/}
+                <ActivateCodeDialog backClick={() => setDialogState(false)} successful={getServer}/>
+            </Dialog>
+            <Dialog active={dialogState2} setActive={setDialogState2}>
+                <AddServerDialog backClick={() => setDialogState2(false)} successful={getServer}/>
+            </Dialog>
         </div>
     );
 };

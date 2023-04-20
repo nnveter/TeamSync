@@ -1,0 +1,43 @@
+.textCategories{
+    margin-left: 2px;
+    transition: .2s;
+    user-select: none;
+}
+
+.svgCategories{
+    margin-left: 2px;
+    transition: .2s;
+}
+
+.divCategories{
+    display: flex;
+    align-items: center;
+    color: #828991;
+    justify-content: space-between;
+    transition: .1s;
+}
+
+.divCategories:hover{
+    color: rgb(219, 222, 225);
+}
+
+.svgCategories.unActive{
+    transform: rotate(-90deg);
+}
+
+.childrenDiv{
+    margin-left: 15px;
+}
+
+.addChannelSvg{
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+    color: #828991;
+}
+
+.addChannelSvg:hover{
+    color: rgb(219, 222, 225);
+}
+
+

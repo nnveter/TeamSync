@@ -16,8 +16,7 @@ const AddServerDialog = (props) => {
         })
             .then(r => {
                 console.log(r.data)
-                props.successful()
-                props.setActive(false)
+                props.successful(r?.data?.id)
             })
             .catch((e) => {
                 console.log(e.response.data)
@@ -26,8 +25,6 @@ const AddServerDialog = (props) => {
     }
 
     return (
-        <div className={props.active ? "addServerDialog active" : "addServerDialog"} onClick={() => props.setActive(false)}>
-            <div className="addServerDialogContent" onClick={e => e.stopPropagation()}>
                 <div className="addServerDialogDiv">
                     <h1>Персонализируйте свой сервер</h1>
                     <text>Персонализируйте свой новый сервер, выбрав ему название и значок. Их можно будет изменить в любой момент.</text>
@@ -39,12 +36,10 @@ const AddServerDialog = (props) => {
                         <span>Название сервера</span>
                     </div>
                     <div className="buttonContainer">
-                        <button className="backButton" onClick={() => props.setActive(false)}>Отмена</button>
+                        <button className="backButton" onClick={props.backClick}>Отмена</button>
                         <button className="finishButton" onClick={OnClick}>Создать</button>
                     </div>
                 </div>
-            </div>
-        </div>
     );
 };
 
