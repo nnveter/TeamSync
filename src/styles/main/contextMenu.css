@@ -1,0 +1,26 @@
+
+.contextMenu{
+    padding: 10px;
+    background: #111214;
+    border-radius: 5px;
+}
+
+.contextMenuItem{
+    padding: 5px;
+    border-radius: 3px;
+    color: #b2b2b3;
+    user-select: none;
+}
+
+.contextMenuItem:hover{
+    background: #4752c4;
+    color: white;
+}
+
+.contextMenuItem.SpecialTextEdition{
+    color: #888fe1;
+}
+
+.contextMenuItem.SpecialTextEdition:hover{
+    color: white;
+}

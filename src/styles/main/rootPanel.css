@@ -1,0 +1,40 @@
+.mainDiv{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.rootLeftPanel{
+    height: 100%;
+    width: 72px;
+    min-width: 72px;
+    max-width: 72px;
+    background: rgb(30, 31, 34);
+}
+
+.rootLeftDopPanel{
+    height: 100%;
+    width: 220px;
+    border-top-left-radius: 10px;
+    min-width: 220px;
+    max-width: 220px;
+    background: rgb(43,45,49);
+}
+
+.rootCentralPanel{
+    display:  flex;
+    height: 100%;
+    width: 100%;
+    min-width: 936px;
+    
+    flex-direction: column-reverse;
+    background: #313338;
+}
+
+.rootRightPanel{
+    height: 100%;
+    width: 333px;
+    min-width: 333px;
+    max-width: 333px;
+    background: rgb(0, 0, 0);
+}

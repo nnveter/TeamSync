@@ -1,0 +1,69 @@
+
+.channelContainer{
+    background: none;
+    display: flex;
+    align-content: center;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 2px;
+    padding: 3px;
+    height: 34px;
+    border-radius: 4px;
+    transition: .1s;
+    justify-content: space-between;
+    --hover: 0;
+}
+
+.channelContainer:hover{
+    background: rgb(54, 55, 61);
+    --hover: 1;
+}
+
+.channelContainer:hover text{
+    color: rgb(209, 212, 216);
+}
+
+.channelContainer.active{
+    background: rgb(64,66,73);
+}
+
+.channelContainer text{
+    margin-left: 3px;
+    color: rgb(138,145,156);
+    user-select: none;
+}
+.channelContainer.active text{
+    color: rgb(241,243,244);
+}
+
+.textSvg{
+    margin-left: 3px;
+}
+
+.containerChannelSettingsButton{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    scale: var(--hover);
+    transition: .3s;
+}
+
+.channelSettingsButton{
+    display: flex;
+    fill: #7d818b;
+}
+
+.channelSettingsButton:hover{
+    fill: white;
+}
+
+.leftTextSvgContainer{
+    display: flex;
+    align-items: center;
+}
+
+.leftTextSvgContainer text {
+    display: flex;
+    position: relative;
+    top: -1.5px;
+}

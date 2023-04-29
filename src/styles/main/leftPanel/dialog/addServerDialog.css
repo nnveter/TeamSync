@@ -1,0 +1,106 @@
+.addServerDialog{
+    position: fixed;
+
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.4);
+
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.addServerDialog.active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.addServerDialogContent{
+    padding: 0;
+    border-radius: 12px;
+    background: #1d2b3a;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    height: fit-content;
+    width: 40%;
+}
+
+.addServerDialogContent h1{
+    margin: 25px 25px 0 25px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.addServerDialogContent text{
+    margin: 10px 25px 0 25px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.addPhotoServerDialog{
+    background: white;
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+.closeButton{
+    display: flex;
+}
+
+.backButton{
+    left: 0;
+    width: 96px;
+    height: 38px;
+    outline: none;
+    border: none;
+    background: none;
+    color: white;
+}
+
+.backButton:hover{
+    color: #dedddd;
+    transition: 0.2s;
+}
+
+.finishButton{
+    outline: none;
+    border: none;
+    float: right;
+    padding: 7px 15px;
+    height: 38px;
+    background: #e8cdc9;
+    border-radius: 10px;
+}
+
+.finishButton:hover{
+    background: #f1bab2;
+    transition: .2s;
+}
+
+.buttonContainer{
+    width: 100%;
+    margin: 20px 0 0 0;
+    padding: 20px;
+    background: #566576;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.addServerDialogDiv{
+    margin: 0;
+}
+
+.photoDiv{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+}

@@ -1,0 +1,13 @@
+
+.activeCodeH2{
+    margin: 25px 25px 0 25px;
+    font-size: 13px;
+    color: white;
+    display: flex;
+    justify-content: left;
+}
+
+.finishButton.activeCode{
+    white-space: nowrap;
+    padding: 7px 15px;
+}

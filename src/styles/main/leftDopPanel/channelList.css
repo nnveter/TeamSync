@@ -1,0 +1,13 @@
+.channelList{
+    height: 100%;
+    width: 100%;
+}
+
+.separatorChannelList{
+    height: 24px;
+    width: 100%;
+}
+
+.nitroSeparatorChannelList{
+    border-top: 1px solid hsla(0,0%,100%,.06);
+}

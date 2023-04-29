@@ -1,0 +1,26 @@
+
+.sendMessage{
+    display: flex;
+    min-height: 44px;
+    margin: 40px 16px;
+    border-radius: 8px;
+    background: #383a40;
+}
+
+.sendMessageInput{
+    width: 100%;
+    border-radius: 8px;
+    background: #383a40;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    text-align: left;
+    border: none;
+    color: white;
+    outline: none;
+    transition: .3s;
+    padding: 10px 10px 10px 20px;
+}
+
+.sendMessageInput:focus{
+    border: 1px solid #00dfc4;
+}

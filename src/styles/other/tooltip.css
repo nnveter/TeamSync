@@ -1,0 +1,112 @@
+
+.tooltipDiv{
+    display: flex;
+    position: relative;
+    justify-items: center;
+    align-items: center;
+}
+
+.tooltip{
+    --backgroundTooltip: rgb(17, 18, 20);
+    width: fit-content;
+    background-color: rgb(17, 18, 20);
+    color: #fff;
+    text-align: center;
+    text-wrap: none;
+    text-overflow: clip;
+    border-radius: 6px;
+    padding: 8px 12px 8px 12px;
+    position: absolute;
+    z-index: 1;
+    transition: .1s;
+}
+
+.tooltip.top {
+    bottom: 110%;
+    left: 50%;
+    margin-left: -75px;
+}
+
+.tooltip.top::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--backgroundTooltip) transparent transparent transparent;
+}
+
+.tooltip.top.unActive{
+    transition: .005s;
+    scale: 0;
+}
+
+.tooltip.bottom {
+    top: 120%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip.bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent var(--backgroundTooltip) transparent;
+}
+
+.tooltip.bottom.unActive{
+    transition: .005s;
+    scale: 0;
+}
+
+.tooltip.right {
+    left: 100%;
+}
+
+.tooltip.right::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent var(--backgroundTooltip) transparent transparent;
+}
+
+.tooltip.right.unActive{
+    transition: .005s;
+    scale: 0;
+}
+
+.tooltip.left {
+    right: 100%;
+}
+
+.tooltip.left::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--backgroundTooltip);
+}
+
+.tooltip.left.unActive{
+    transition: .005s;
+    scale: 0;
+}
+
+.tooltip text {
+    display: flex;
+    margin-bottom: 3px;
+    white-space: nowrap;
+}
