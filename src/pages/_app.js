@@ -23,6 +23,9 @@ import "../styles/main/CentralPanel/messageList.css"
 import "../styles/main/CentralPanel/sendMessage.css"
 import "../styles/other/toolBar.css"
 import "../styles/main/contextMenu.css"
+import "../styles/main/leftDopPanel/dialog/InviteFriendDialog.css"
+import "../styles/main/leftDopPanel/dialog/CreateChannelDialog.css"
+import "../styles/main/dialog.css"
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />

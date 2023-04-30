@@ -19,7 +19,7 @@ const Channel = (props) => {
         {   setActive(true)
             props.setActiveChannel([props.id])
             props.connectMessage(props.id)
-        }}>
+        }} onContextMenu={(e) => {e.stopPropagation(); e.preventDefault()}}>
             <div className="leftTextSvgContainer">
                 <svg width="20" height="20" className="textSvg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <g fill="#7d818b">

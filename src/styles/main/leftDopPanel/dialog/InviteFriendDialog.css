@@ -1,0 +1,18 @@
+
+.codeText{
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    align-content: center;
+    color: #f6dddd;
+    font-size: 35px;
+}
+
+.descriptionText{
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-content: center;
+    color: white;
+}

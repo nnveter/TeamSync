@@ -7,7 +7,7 @@ import axios from "axios";
 import {URL} from "@/strings/constants";
 import {getJwt} from "@/other/getjwt";
 import AddServerDialog from "./Dialog/AddServerDialog";
-import Dialog from "./Dialog/Dialog";
+import Dialog from "../main/Dialog";
 import ActivateCodeDialog from "./Dialog/ActivateCodeDialog";
 import ActiveCode from "./ActiveCode";
 
@@ -36,20 +36,34 @@ const ServerList = (props) => {
             })
     }
 
+    function getStateHover(openServer, serverHover, equalsIs){
+        if (openServer === equalsIs){
+            return "serverIndicator active"
+        }
+        else{
+            if (serverHover === equalsIs){
+                return "serverIndicator hover"
+            }
+            else{
+                return "serverIndicator"
+            }
+        }
+    }
+
     useEffect(getServer, [])
 
     return (
         <div>
             <div className="serverList">
                 <div style={{display: "flex", alignContent: "center", justifyContent: "center"}}>
-                    <div className={props.openServer[0] === -1 ? "serverIndicator active" : serverHover[0] === -1 ? "serverIndicator hover" : "serverIndicator"}></div>
+                    <div className={getStateHover(props.openServer[0], serverHover[0], -1)}></div>
                     <LsServer onHover={setServerHover}/>
                 </div>
                 <SeparatorServer/>
                 { props.listServer.map((e) =>
                     <div style={{display: "flex", alignContent: "center", justifyContent: "center"}} key={e.id}>
-                        <div className={props.openServer[0] === e.id ? "serverIndicator active" : serverHover[0] === e.id ? "serverIndicator hover" : "serverIndicator"} key={e.id}></div>
-                        <Server info={e} key={e.id} onHover={setServerHover} onClick={() => props.setOpenServer([e.id])} />
+                        <div className={getStateHover(props.openServer[0], serverHover[0], e.id)} key={`serverIndicator-${e.id}`}></div>
+                        <Server info={e} key={`server-${e.id}`} onHover={setServerHover} onClick={() => props.setOpenServer([e.id])} />
                     </div>
                 )}
                 <AddServer content="Добавить сервер" onClick={() => setDialogState2(true)}/>

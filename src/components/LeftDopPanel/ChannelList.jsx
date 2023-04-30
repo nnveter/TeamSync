@@ -5,6 +5,10 @@ import {getJwt} from "@/other/getjwt";
 import Categories from "./Categories";
 import Channel from "./Channel";
 import ContextMenu from "@/components/main/ContextMenu";
+import CreateCategoriesDialog from "@/components/LeftDopPanel/Dialog/CreateCategoriesDialog";
+import CreateChannelDialog from "@/components/LeftDopPanel/Dialog/CreateChannelDialog";
+import InviteFriendDialog from "@/components/LeftDopPanel/Dialog/InviteFriendDialog";
+import Dialog from "@/components/main/Dialog";
 
 const ChannelList = (props) => {
 
@@ -12,6 +16,12 @@ const ChannelList = (props) => {
     const [channel, setChannel] = useState([])
 
     const [contextMenuPosition, setContextMenuPosition] = useState({ x: 0, y: 0 });
+
+    const [isShowCreateCategoriesDialog, setIsShowCreateCategoriesDialog] =useState(false)
+    const [isShowCreateChannelDialog, setIsShowCreateChannelDialog] =useState(false)
+
+    const [isShowInviteFriendDialog, setIsShowInviteFriendDialog] =useState(false)
+    const [InviteFriendCode, setInviteFriendCode] =useState("")
 
     const handleContextMenu = (e) => {
         e.preventDefault();
@@ -21,7 +31,25 @@ const ChannelList = (props) => {
         }
     };
 
-    useEffect(() => {
+    function createInvite(spaceId){
+        axios({
+            url: URL + "invitations",
+            method: "post",
+            headers: {'Authorization': "Bearer " + getJwt().access},
+            data: {
+                "activationsLeft": 100000,
+                "expirationTimeInSeconds": 604800,
+                "spaceId": spaceId
+            }
+        }).then(r => {
+            setInviteFriendCode(r.data.value)
+            setIsShowInviteFriendDialog(true)
+        }).catch(e => {
+            console.log(e)
+        })
+    }
+
+    function refreshChannels(){
         if (props.serverId[0]){
             axios({
                 url: URL + `channels/space/${props.serverId}/group/category`,
@@ -48,16 +76,29 @@ const ChannelList = (props) => {
                 })
         } // TODO: сделать ls
         props.setrefreshListServer(false)
+    }
+
+    useEffect(() => {
+        refreshChannels()
     }, [props.serverId, props.refreshListServer])
 
 
     return (
         <div className="channelList" onContextMenu={handleContextMenu} >
+            <Dialog active={isShowCreateCategoriesDialog} setActive={setIsShowCreateCategoriesDialog}>
+                <CreateCategoriesDialog setIsShowCreateCategoriesDialog={setIsShowCreateCategoriesDialog}/>
+            </Dialog>
+            <Dialog active={isShowCreateChannelDialog} setActive={setIsShowCreateChannelDialog}>
+                <CreateChannelDialog refreshChannels={refreshChannels} spaceId={props.serverId} setIsShowCreateChannelDialog={setIsShowCreateChannelDialog}/>
+            </Dialog>
+            <Dialog active={isShowInviteFriendDialog} setActive={setIsShowInviteFriendDialog}>
+                <InviteFriendDialog code={InviteFriendCode} setIsShowInviteFriendDialog={setIsShowInviteFriendDialog}/>
+            </Dialog>
             {props.showContextMenuChannelList && (
-                <ContextMenu contextMenuPosition={contextMenuPosition}>
-                    <div className="contextMenuItem">Создать канал</div>
-                    <div className="contextMenuItem">Создать категорию</div>
-                    <div className="contextMenuItem SpecialTextEdition">Пригласить людей</div>
+                <ContextMenu contextMenuPosition={contextMenuPosition} setShowContextMenuChannelList={props.setShowContextMenuChannelList}>
+                    <div className="contextMenuItem" onClick={() => setIsShowCreateChannelDialog(true)}>Создать канал</div>
+                    <div className="contextMenuItem" onClick={() => setIsShowCreateCategoriesDialog(true)}>Создать категорию</div>
+                    <div className="contextMenuItem SpecialTextEdition" onClick={() => createInvite(props.serverId[0])}>Пригласить людей</div>
                 </ContextMenu>
             )}
             <div className="separatorChannelList"/>
